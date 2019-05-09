@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.flex {
+   display: flex;
+   align-items: baseline;
+  justify-content: center;
+ }
+
+.title {
+  margin-right: 12px;
+}
+
+.container {
+  margin: 28px;
+}

@@ -1,0 +1,33 @@
+<div class="flex">
+    <div class="wrapper">
+        <app-bought-card (boughtSumChanged)="onBoughtSumChanged($event)"></app-bought-card>
+    </div>
+
+    <div class="wrapper">
+        <app-sold-card (soldSumChanged)="onSoldSumChanged($event)"></app-sold-card>
+    </div>
+</div>
+
+<div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="currency">
+            <th mat-header-cell *matHeaderCellDef>CURRENCY</th>
+            <td mat-cell *matCellDef="let transaction">{{transaction.currency}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="profit">
+            <th mat-header-cell *matHeaderCellDef>PROFIT</th>
+            <td mat-cell *matCellDef="let transaction">{{transaction.profit}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="fee">
+            <th mat-header-cell *matHeaderCellDef>FEE</th>
+            <td mat-cell *matCellDef="let transaction">{{transaction.fee}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+<div>PROFIT: {{ profit$ | async }} RUB</div>

@@ -1,0 +1,9 @@
+<div class="flex container">
+  <ng-container *ngIf="currentCurrency$ | async as currency">
+    <span class="title">Current:</span>
+    <div>
+      <span>{{ currency }}</span>
+      <span>RUB</span>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  text-align: center;
+  margin-top: 28px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.wrapper {
+  width: 40%;
+  margin: 0 30px;
+}
+
+.example-container {
+  height: 152px;
+  width: 350px;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-table-sticky:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky:last-child {
+  border-left: 1px solid #e0e0e0;
+}
+
+th.mat-header-cell {
+  text-align: center;
+}

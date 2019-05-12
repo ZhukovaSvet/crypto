@@ -16,19 +16,17 @@ import {CommonModule} from '@angular/common';
         AppComponent,
     ],
     imports: [
+        BrowserModule,
         RouterTestingModule,
         AppRoutingModule,
         FormsModule,
         MatTabsModule,
-        RouterModule,
         HttpClientModule,
-        BrowserModule,
         CommonModule,
         BrowserAnimationsModule,
     ],
     providers: [CurrencyService],
     exports: [RouterModule],
-    providers: [CurrencyService],
     bootstrap: [AppComponent],
 })
 export class AppModule {

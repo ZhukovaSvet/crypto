@@ -10,7 +10,6 @@ import {RouterModule} from '@angular/router';
 import {BoughtCardComponent} from '../../components/bought-card/bought-card.component';
 import {SoldCardComponent} from '../../components/sold-card/sold-card.component';
 import {HttpClientModule} from '@angular/common/http';
-import {BrowserModule} from '@angular/platform-browser';
 
 @NgModule({
     imports: [
@@ -24,7 +23,6 @@ import {BrowserModule} from '@angular/platform-browser';
         MatIconModule,
         MatTableModule,
         ReactiveFormsModule,
-        // BrowserModule,
         BtcBurstPageRoutingModule,
     ],
     declarations: [

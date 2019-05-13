@@ -1,8 +1,8 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {BtcRubPageComponent} from './btc-rub.page';
-import {CurrencyService} from '../../services/currency.service';
-import {BtcRubPageModule} from './btc-rub.page.module';
+import { BtcRubPageComponent } from './btc-rub.page';
+import { CurrencyService } from '../../services/currency.service';
+import { BtcRubPageModule } from './btc-rub.page.module';
 
 describe('BtcRubPageComponent', () => {
     let component: BtcRubPageComponent;
@@ -10,11 +10,10 @@ describe('BtcRubPageComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [BtcRubPageModule],
-            // providers: [{ provide: CurrencyService, useValue: 0 }],
-            providers: [CurrencyService],
-        })
-        .compileComponents();
+                imports: [BtcRubPageModule],
+                providers: [CurrencyService],
+            })
+            .compileComponents();
     }));
 
     beforeEach(() => {

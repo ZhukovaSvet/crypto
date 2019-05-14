@@ -1,0 +1,30 @@
+<mat-card class="card">
+    <b class="title">Bough</b>
+    <div class="row">
+        <div class="item">PRICE</div>
+        <div class="item">AMOUNT</div>
+        <div class="item">DELETE</div>
+    </div>
+
+    <div *ngFor="let item of boughtItems; let i = index" class="row">
+        <div class="item">{{item.buyPrice}}</div>
+        <div class="item">{{item.buyAmount}}</div>
+        <div class="item">
+            <button (click)="deleteBoughtItem(i)" mat-icon-button>
+                <mat-icon aria-label="delete">cancel</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>
+
+<form [formGroup]="boughtForm" (ngSubmit)="addBoughtItem()">
+    <mat-form-field class="form-field">
+        <input matInput placeholder="Price" formControlName="buyPrice" value="">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Amount" value="" formControlName="buyAmount">
+    </mat-form-field>
+
+    <button type="submit" [disabled]="boughtForm.invalid " class="button" mat-stroked-button>Add</button>
+</form>
